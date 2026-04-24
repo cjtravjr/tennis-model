@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-ghost: #F8F9FA;
+  --color-snow: #FFFFFF;
+  --color-charcoal: #1C1C1E;
+  --color-slate: #8E8E93;
+  --color-sage: #006B3E;
+  --color-rose: #C58B8B;
+}
+
+body {
+  background-color: var(--color-ghost);
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+.match-row {
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.match-row:hover {
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+
+.match-row.active {
+  background: rgba(0, 0, 0, 0.04);
+  border-left: 3px solid #1C1C1E;
+  padding-left: 21px; /* compensate for border */
+}
+
+.pill {
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 400;
+  border: 1px solid rgba(0,0,0,0.1);
+  letter-spacing: 0.02em;
+}
+
+.text-secondary {
+  color: #8E8E93;
+}
+
+.text-sage {
+  color: #006B3E;
+}
+
+.bg-sage-light {
+  background-color: rgba(0, 107, 62, 0.1);
+}
+
+.text-rose {
+  color: #C58B8B;
+}
+
+.bg-rose-light {
+  background-color: rgba(197, 139, 139, 0.1);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.confidence-bar {
+  height: 2px;
+  width: 40px;
+  background: #E5E5E5;
+  position: relative;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: #1C1C1E;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
